@@ -9,20 +9,20 @@ public class LeonTest extends AnimalTest {
     @Override
     @Test
     void testEmitirSonido() {
-        Animal leon = new Leon();
+        Animal leon = new Leon(TipoHabitat.TERRESTRE);
         assertEquals("Rugido", leon.emitirSonido());
     }
 
     @Override
     @Test
     void testObtenerDieta() {
-        Animal leon = new Leon();
+        Animal leon = new Leon(TipoHabitat.TERRESTRE);
         assertEquals("Carnívoro", leon.obtenerDieta());
     }
 
     @Test
     void testLeonHabitat() {
-        Animal leon = new Leon();
+        Animal leon = new Leon(TipoHabitat.TERRESTRE);
         assertEquals(TipoHabitat.TERRESTRE, leon.getHabitat());
     }
 }

@@ -10,26 +10,26 @@ public class PerroTest extends AnimalTest {
     @Override
     @Test
     void testEmitirSonido() {
-        Animal perro = new Perro();
+        Animal perro = new Perro(TipoHabitat.TERRESTRE);
         assertEquals("Ladrido", perro.emitirSonido());
     }
 
     @Override
     @Test
     void testObtenerDieta() {
-        Animal perro = new Perro();
+        Animal perro = new Perro(TipoHabitat.TERRESTRE);
         assertEquals("Omnívoro", perro.obtenerDieta());
     }
 
     @Test
     void testPerroHabitat() {
-        Animal perro = new Perro();
+        Animal perro = new Perro(TipoHabitat.TERRESTRE);
         assertEquals(TipoHabitat.TERRESTRE, perro.getHabitat());
     }
 
     @Test
     void testPerroInteractuarConHumano() {
-        Domestico perro = new Perro();
+        Domestico perro = new Perro(TipoHabitat.TERRESTRE);
         assertEquals("El perro mueve la cola y ladra de felicidad", perro.interactuarConHumano());
     }
 }
